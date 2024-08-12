@@ -1,0 +1,74 @@
+/* 💡In the Beginning, PaPaGuy wrote beautiful Codes < /> 💜❤️ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+nav a.active {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+nav a .icon {
+    margin-right: 0.5rem;
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+section {
+    display: none;
+}
+
+section.active-section {
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+[data-theme="dark"] {
+    --background-color: #1c1c1c;
+    --text-color: #e0e0e0;
+}
