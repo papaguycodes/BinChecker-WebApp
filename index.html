@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIN Checker Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BIN Checker</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')" class="active">
+                <svg class="icon"><use xlink:href="#ic_credit_card"></use></svg> Home</a></li>
+            <li><a href="#history" onclick="showSection('history')">
+                <svg class="icon"><use xlink:href="#ic_favorite"></use></svg> History</a></li>
+            <li><a href="#settings" onclick="showSection('settings')">
+                <svg class="icon"><use xlink:href="#ic_settings"></use></svg> Settings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home" class="active-section">
+            <h2>Check BIN</h2>
+            <input type="text" id="binInput" placeholder="Enter BIN number">
+            <button onclick="checkBin()">Check</button>
+            <div id="binResult"></div>
+        </section>
+
+        <section id="history">
+            <h2>Search History</h2>
+            <input type="text" id="historyFilter" placeholder="Filter history" onkeyup="filterHistory()">
+            <button onclick="sortHistory()">Sort</button>
+            <button onclick="exportHistory()">Export to CSV</button>
+            <div id="historyList"></div>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <button onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+        </section>
+    </main>
+    <footer>
+        <p>GitHub: PaPaGuyCodes</p>
+    </footer>
+
+    <!-- SVG Icon Definitions -->
+    <svg style="display: none;">
+        <symbol id="ic_credit_card" viewBox="0 0 24 24">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+            <line x1="1" y1="10" x2="23" y2="10"></line>
+        </symbol>
+        <symbol id="ic_favorite" viewBox="0 0 24 24">
+            <path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6l1.2 1.2L12 21.4l7.6-7.6 1.2-1.2a5.4 5.4 0 0 0 0-7.6z"></path>
+        </symbol>
+        <symbol id="ic_settings" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51v.1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-.1a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82v-.09a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h.1a1.65 1.65 0 0 0 1.51-1z"></path>
+        </symbol>
+    </svg>
+
+    <script src="script.js"></script>
+    <script src="viewModel.js"></script>
+</body>
+</html>
