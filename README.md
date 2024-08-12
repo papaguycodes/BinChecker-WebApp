@@ -37,6 +37,11 @@ BinChecker-WebApp/
 - **JavaScript (ES6+)**: For functionality and API integration.
 - **Knockout.js**: For implementing the ViewModel architecture.
 
+## Known Issues
+
+- The app relies on the availability of the BIN List API service. If the API is down or unreachable, the app will not function correctly.
+- Certain older browsers may not fully support the features used in the app, such as SVG icons or certain JavaScript functions.
+
 ## Special Thanks
 
 - **[BIN List API](https://binlist.net/)**: A free and easy-to-use API service that provides BIN lookup data.
